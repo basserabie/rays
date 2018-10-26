@@ -7,7 +7,25 @@
 		<key>rays.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>6</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>6A16713D21732C440081DA41</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6A16715121732C460081DA41</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6A16715C21732C460081DA41</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

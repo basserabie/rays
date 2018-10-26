@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>660341446033-tvod7f8kgqrfqpubgtl58an2gb5u024q.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.660341446033-tvod7f8kgqrfqpubgtl58an2gb5u024q</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCqp8GGc1r79LMU8Fx1r18lJOSTdoyakpY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>660341446033</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.noStress.rays</string>
+	<key>PROJECT_ID</key>
+	<string>rays-cb383</string>
+	<key>STORAGE_BUCKET</key>
+	<string>rays-cb383.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:660341446033:ios:995de3c6f4d15166</string>
+	<key>DATABASE_URL</key>
+	<string>https://rays-cb383.firebaseio.com</string>
+</dict>
+</plist>
