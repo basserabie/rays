@@ -29,7 +29,7 @@ class linkUpViewController: UIViewController, CLLocationManagerDelegate {
     //creates avriable for partner long
     var partnerLocLong = ""
     //creates var for master index
-    var masterIndexVar = Int()
+    var masterIndexVar = String()
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,15 +73,32 @@ class linkUpViewController: UIViewController, CLLocationManagerDelegate {
     //function reads master index
     func readIndex() {
         //creates snapshot of masterIndex
-        ref?.child("globalVars").child("masterIndex").observeSingleEvent(of: .value, with: { (snapshot) in
-            let value = snapshot.value as? Int ?? 44
-            let indexRead = value
-            self.masterIndexVar = indexRead
-            print(indexRead)
+//        ref?.child("globalVars").observeSingleEvent(of: .value, with: { (snapshot) in
+//            var count = snapshot.children.allObjects.count
+//            let value = snapshot.value as! NSDictionary
+//            let readIndex = value["masterIndex"] as? String ?? "agaga"
+//            let index = User(readIndex: readIndex)
+//            self.masterIndexVar = index
+//            print(value)
+//            print("\(self.masterIndexVar) + 343haga")
+//            print("\(count) + tytyt")
+//        }) { (error) in
+//            print(error.localizedDescription)
+//            print("hahahahahahahahahahaha")
+//        }
+        
+        ref?.child("globalVars").observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            let value = snapshot.value as? NSMutableDictionary
+            let index = value?["masterIndex"] as? String ?? ""
+            let realindex = index
+//            let final = (index: String())
+            self.masterIndexVar = realindex
+            print(self.masterIndexVar)
         }) { (error) in
             print(error.localizedDescription)
-            print("hahahahahahahahahahaha")
         }
+
     }
     
     
@@ -89,7 +106,7 @@ class linkUpViewController: UIViewController, CLLocationManagerDelegate {
     func delegateIndexFromMasterIndex() {
         //creates variable to store read master index
         let readIndex = self.masterIndexVar
-        let myIndex = readIndex + 144
+        let myIndex = (Int(readIndex) ?? 23) + 1
         //writes my own index into profile on database
         ref?.child("users").child(userID).child("myIndex").setValue(myIndex)
         //rewrites the masterIndex adding one to it denoting a new user
@@ -100,3 +117,4 @@ class linkUpViewController: UIViewController, CLLocationManagerDelegate {
     
     
 }
+
